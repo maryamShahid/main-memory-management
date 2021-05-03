@@ -1,6 +1,6 @@
 # Main Memory Simulator
 
-Main Memory simulator is a C application that provides a memory management library for processes. This library provides dynamic memory allocation and deallocation for processes that wish to use main memory. Allocation is made according to the Buddy memory allocation algorithm.
+Main Memory simulator is a C application that provides a memory management library for processes. The library provides dynamic memory allocation and deallocation for processes that wish to use main memory. Allocation is made according to the buddy memory allocation algorithm.
 
 ## How to Use:
 
