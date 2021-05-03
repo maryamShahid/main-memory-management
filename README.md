@@ -4,7 +4,7 @@ Main Memory simulator is a C application that provides a memory management libra
 
 ## How to Use:
 
-Compile your application with sbmemlib.a. Import "sbmemlib.h" to use the library. Here is the basic documentation:
+Compile your application with sbmemlib.a. Import "sbmem.h" to use the library. Here is the basic documentation:
 
 * **int sbmem_init (int segsize):** This function will create and initialize a shared memory segment of the given size. The given size is in bytes and must be a power of 2. Memory will be allocated from that segment to the requesting. If operation is successful, the function will return 0, otherwise, it will return -1. 
 
