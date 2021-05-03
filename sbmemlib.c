@@ -31,17 +31,6 @@ struct process {
 struct process pList[10];
 signed char currentProcesses[10] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1};
 
-// For testing purposes
-void printFreeList() {
-    struct Buddy *bud = &current;
-    printf("List:\n");
-    while (bud != NULL) {
-        printf("(%d,free:%d)", bud->space, bud->free);
-        bud = bud->pair;
-    }
-    printf("\n");
-}
-
 int sbmem_init(int segmentsize) {
     if (segmentsize < MIN_SEGMENT_SIZE || segmentsize > MAX_SEGMENT_SIZE) {
         perror("Segment size is not within bounds\n");
@@ -196,4 +185,15 @@ int sbmem_close() {
     sem_post(&semaphore);
 
     return (0);
+}
+
+// For testing purposes
+void printFreeList() {
+    struct Buddy *bud = &current;
+    printf("List:\n");
+    while (bud != NULL) {
+        printf("(%d,free:%d)", bud->space, bud->free);
+        bud = bud->pair;
+    }
+    printf("\n");
 }
