@@ -56,11 +56,13 @@ int sbmem_init(int segmentsize) {
             return (-1);
         }
     }
+    
     int f = ftruncate(shm_fd, segmentsize);
     if (f == -1) {
         perror("Error using ftruncate.\n");
         return (-1);
     }
+    
     shm_fd_ptr = mmap(NULL, segmentsize, PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
     if(shm_fd_ptr == MAP_FAILED){
         perror("Error using mmap.\n");
