@@ -2,7 +2,7 @@
 
 Main memory simulator is a C application that provides a memory management library for processes. The library provides dynamic memory allocation and deallocation for processes that wish to use main memory. Allocation is made according to the buddy memory allocation algorithm.
 
-#### To Run the Program:
+#### Run the Program:
 
 ```
 $ ./create_memory_sb
@@ -10,7 +10,7 @@ $ ./app
 $ ./destroy_memory_sb
 ```
 
-### How to Use:
+#### How to Use:
 
 Compile your application with sbmemlib.a. Import "sbmem.h" to use the library. Here is the basic documentation:
 
