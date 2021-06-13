@@ -14,7 +14,7 @@ $ ./destroy_memory_sb
 
 Compile your application with sbmemlib.a. Import "sbmem.h" to use the library. Here is the basic documentation:
 
-* **`int sbmem_init (int segsize):`** This function will create and initialize a shared memory segment of the given size. The given size is in bytes and must be a power of 2. Memory will be allocated from that segment to the requesting. If operation is successful, the function will return 0, otherwise, it will return -1. 
+* **`int sbmem_init (int segsize):`** This function will create and initialize a shared memory segment of the given size. Memory will be allocated from that segment to the requesting. If operation is successful, the function will return 0, otherwise, it will return -1. 
 
 * **`sbmem_remove ():`** This function removes the shared memory segment from the system.
 
